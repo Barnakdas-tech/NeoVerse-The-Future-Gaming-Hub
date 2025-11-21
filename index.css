@@ -121,6 +121,10 @@ body{
     cursor: pointer;
     box-shadow: 0 0 5px #FCEE0A;
 }
+#neo, #arcade{
+    text-decoration: none;
+}
+
 /* HEADER STYLE COMPLETE */
 
 /* MAIN STYLE */
@@ -131,7 +135,10 @@ body{
     align-items: center;
     padding: 10rem 5rem 0 5rem;
     margin-bottom: 5px;
+    
+    
 }
+
 #gamesarea{
     text-align: center;
     padding: 9rem 5rem 0 5rem; 
@@ -217,25 +224,22 @@ main{
     backdrop-filter: blur(5px);
     border: 1px solid rgba(252, 238, 10, 0.3);
     border-radius: 8px;
-    padding: 20px 20px; /* 20px top/bottom, 10px left/right */
+    padding: 20px 20px; 
 }
 .game-card img{
-    display: block; /* removes inline spacing */
+    display: block; 
     width: 100%;
     height: auto;
     border-radius: 8px;
-        transition: transform 0.4s cubic-bezier(.2,.8,.2,1), box-shadow 0.25s ease; /* smooth zoom and shadow */
+        transition: transform 0.4s cubic-bezier(.2,.8,.2,1), box-shadow 0.25s ease; 
     transform-origin: center center;
 }
 .game-card:hover img{
-    transform: scale(1.06); /* subtle zoom */
+    transform: scale(1.06);
     box-shadow: 0 8px 20px rgba(255,0,127,0.08), 0 0 10px rgba(252,238,10,0.12);
 }
-
-
-/* place the last game card in the middle column */
 #featuredgames .game-card:last-child{
-    grid-column: 2 / 3; /* put it in the center column */
+    grid-column: 2 / 3; 
     justify-self: center;
 }
 .gamecard{
@@ -306,8 +310,6 @@ main{
     vertical-align: middle;
     margin: 0 0.25rem;
 }
-
-/* links container */
 #links{
     display: flex;
     gap: 0.8rem;
@@ -340,12 +342,192 @@ main{
     margin: 50px;
     padding: 30px auto;
 }
+     /* FOOTER STYLE COMPLETE */
+    /* MAKING PAGE RESPONSIVE */
 
-@media (max-width: 700px){
+    @media (max-width: 700px){
     #footer{
         flex-direction: column;
         gap: 0.6rem;
         align-items: center;
+    }
+}
+
+
+@media (max-width: 900px) {
+    #header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 20px;
+        justify-content: center;
+    }
+
+    #name {
+        width: 100%;
+        text-align: center;
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+    }
+
+    #Home, #Games, #News, #Contact, #About {
+        margin: 6px 10px;
+    }
+
+    #header div a {
+        font-size: 16px !important;
+    }
+}
+@media (max-width: 700px) {
+    #tag {
+        flex-direction: column;
+    }
+
+    #welcome, #future {
+        font-size: 36px;
+        margin: 0;
+    }
+
+    #portal {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+
+    #mainarea {
+        padding: 7rem 1rem 0 1rem;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    #featuredgames {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 30px;
+    }
+
+    #featuredgames .game-card:last-child {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    #featuredgames {
+        grid-template-columns: 1fr;
+    }
+    
+    .viewdetails {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .game-card img {
+        height: auto;
+    }
+}
+
+
+@media (max-width: 700px) {
+    #social {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 20px 0;
+    }
+
+    #links {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    #copyright {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+@media (max-width: 450px){
+    #browse {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+    .gamecard {
+        font-size: 20px;
+    }
+
+    .genre {
+        font-size: 16px;
+    }
+}
+@media (max-width: 450px){
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    #mainarea {
+        padding: 6rem 0.5rem 0 0.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .game-card:hover {
+        transform: scale(1.05);
+    }
+    .game-card:hover img {
+        transform: scale(1.03);
+        box-shadow: 0 0 8px rgba(252,238,10,0.15);
+    }
+    .viewdetails:hover {
+        box-shadow: 0 0 12px #FCEE0A;
+        background-color: #FCEE0A;
+        color: #0a0f14;
+    }
+}
+
+@media (max-width: 600px) {
+    .game-card:hover {
+        transform: scale(1.03);
+    }
+    .game-card:hover img {
+        transform: scale(1.02);
+        box-shadow: 0 0 6px rgba(252,238,10,0.15);
+    }
+    .viewdetails:hover {
+        background-color: #FCEE0A;
+        color: #0a0f14;
+        box-shadow: 0 0 10px #FCEE0A;
+    }
+}
+
+@media (max-width: 400px) {
+    .game-card:hover {
+        transform: scale(1.02);
+    }
+    .game-card:hover img {
+        transform: scale(1.01);
+    }
+    .viewdetails:hover {
+        box-shadow: 0 0 8px #FCEE0A;
+    }
+}
+@media (max-width: 900px) {
+    #mainarea {
+        padding-top: 13rem !important; 
+    }
+}
+
+@media (max-width: 700px) {
+    #mainarea {
+        padding-top: 14rem !important;
+    }
+}
+
+@media (max-width: 500px) {
+    #mainarea {
+        padding-top: 15rem !important;
     }
 }
 

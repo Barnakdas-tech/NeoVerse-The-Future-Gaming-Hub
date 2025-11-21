@@ -123,10 +123,14 @@ body {
     cursor: pointer;
     box-shadow: 0 0 5px #FCEE0A;
 }
+#neo, #arcade{
+    text-decoration: none;
+}
+
             
                        /* HEADER STYLE COMPLETE */
 
-                       /* MAIN STYLE */ */
+                       /* MAIN STYLE */ 
                     
 main {
     padding-top: 100px;
@@ -246,8 +250,6 @@ main {
     vertical-align: middle;
     margin: 0 0.25rem;
 }
-
-/* links container */
 #links{
     display: flex;
     gap: 0.8rem;
